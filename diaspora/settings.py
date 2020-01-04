@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'events',
-    # 'location_field.apps.DefaultConfig',
+    'location_field.apps.DefaultConfig',
 ]
 
 MIDDLEWARE = [
