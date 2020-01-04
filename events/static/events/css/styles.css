@@ -7,8 +7,16 @@ body{
 nav{
     display: flex;
     justify-content: flex-start;
+    background-color: aqua;
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
 }
 nav a{
     margin-right: 1em;
+    text-decoration: none;
 }
 
+.event-card{
+    border: solid;
+    margin-top: 2em;
+}
