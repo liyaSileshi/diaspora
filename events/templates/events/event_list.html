@@ -1,20 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'events/css/styles.css' %}">
-    <title>events</title>
-  </head>
-  <body>
-    {% if events %}
-      {% for event in events %}
-        <h1>{{event.name}}</h1>
-      {% endfor %}
+{% extends "base.html" %}
+{% block content %}
+  {% if events %}
+    {% for event in events %}
+      <h1>{{event.name}}</h1>
+    {% endfor %}
 
-    {% else %}
-      <div>No pages to display.</div>
-    {% endif %}
-  </body>
-</html>
+  {% else %}
+    <div>No pages to display.</div>
+  {% endif %}
+{% endblock %}
