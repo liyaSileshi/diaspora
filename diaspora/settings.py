@@ -121,9 +121,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#Location 
-# LOCATION_FIELD = {
-#     'map.provider': 'openstreetmap',
-#     'search.provider': 'nominatim',
-#     'provider.openstreetmap.max_zoom': 18,
-# }
+# Location 
+LOCATION_FIELD = {
+    'map.provider': 'openstreetmap',
+    'search.provider': 'nominatim',
+    'provider.openstreetmap.max_zoom': 18,
+}
