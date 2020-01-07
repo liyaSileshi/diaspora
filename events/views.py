@@ -15,3 +15,13 @@ class EventListView(ListView):
         return render(request, 'events/event_list.html', {
           'events': events
         })
+
+class EventDetailView(DetailView):
+    """ Renders a specific event based on it's slug."""
+    model = Event
+    def get(self, request, slug):
+      """ Returns a specific event page by slug. """
+      event = self.get_queryset().get(slug__iexact=slug)
+      return render(request, 'events/event_detail.html', {
+        'event': event
+      })

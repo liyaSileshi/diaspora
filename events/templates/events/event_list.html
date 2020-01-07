@@ -7,6 +7,7 @@
       <h1>{{event.name}}</h1>
       <h2>{{event.street_address}}</h2>
       <h3>{{event.city}}</h3>
+      <a href="{% url 'event-details-page' event.slug %}" title="Read More">Read More</a>
     </div>
     {% endfor %}
 
