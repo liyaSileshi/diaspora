@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 class Event(models.Model):
     name = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.PROTECT,
-                               help_text="The user that posted this event.", default=1)
+                               help_text="The user that posted this event.", default=1, related_name='author')
     date_time = models.DateTimeField('event date time')
     street_address = models.CharField(max_length=255, default='address 1')
     city = models.CharField(max_length=255, default='city name')
@@ -21,7 +21,7 @@ class Event(models.Model):
                                    help_text="The date and time this page was created. Automatically generated when the model saves.")
     modified = models.DateTimeField(auto_now=True,
                                     help_text="The date and time this page was updated. Automatically generated when the model updates.")
-
+    # participants = models.ManyToManyField(User,blank=True,related_name='participant')
 
     def __str__(self):
         return self.name
@@ -38,3 +38,9 @@ class Event(models.Model):
 
         # Call save on the superclass.
         return super(Event, self).save(*args, **kwargs)
+
+    
+class Participant(models.Model):
+    user = models.ManyToManyField(User,blank=True)
+    # It's suggested to use plural: users = ....
+    event = models.ForeignKey(Event,on_delete=models.CASCADE)

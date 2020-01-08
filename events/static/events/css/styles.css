@@ -1,16 +1,22 @@
 body{
-    background-color: pink;
+    background-color: white;
     font-size: 16px;
     font-family: Helvetica;
     margin: 0;
 }
+
 nav{
     display: flex;
     justify-content: flex-start;
-    background-color: aqua;
     padding-bottom: 0.75em;
     padding-top: 0.75em;
 }
+
+.nav-div{
+    height: 20em;
+    background-color: #FFF5D0;
+}
+
 nav a{
     margin-right: 1em;
     text-decoration: none;
@@ -19,4 +25,9 @@ nav a{
 .event-card{
     border: solid;
     margin-top: 2em;
+}
+
+.main-header{
+    font-size: 3em;
+    padding-left: 14em;
 }

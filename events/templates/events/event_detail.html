@@ -6,6 +6,7 @@
       <hr>
       <p>{{ event.description|linebreaksbr }}</p>
       <hr>
+      <a href="{% url 'event-details-page' %}" title="Read More">Join Event</a>
       <a href="{% url 'event-list-page' %}">Back to List</a>
 
 {% endblock %}
