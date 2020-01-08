@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      <h3>{{ question.quest }}{{ question.author.username }}</b></small></h3>
+      <h1>Answers</h1>
+      {% for answer in question.answer_set.all %}
+        {% include 'quora/answer_detail.html' %}    
+      {% endfor %}
+      <form method='post'>
+        <div class="form-group">
+            {% csrf_token %}
+            {{form.as_p}}
+            <!-- <input type="submit" class="form-control" value="Submit" /> -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>  
+      </form>
+
+      <a href="{% url 'question-list-page' %}">Back to List</a>
+
+{% endblock %}

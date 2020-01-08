@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Questions </h1>
+
+  {% if questions %}
+    {% for question in questions %}
+    <div class='event-card'>
+      <h1>{{question.quest}}</h1>
+      <a href="{% url 'question-details-page' question.slug %}" title="Read More">Read More</a>
+    </div>
+    {% endfor %}
+  {% else %}
+    <div>No pages to display.</div>
+  {% endif %}
+{% endblock %}

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'events',
+    'quora',
     'location_field.apps.DefaultConfig',
     'accounts',
 ]
