@@ -5,5 +5,5 @@ urlpatterns = [
     path('', EventListView.as_view(), name='event-list-page'),
     path('newEvent/', EventCreateView.as_view(), name='create-event-page'),
     path('<str:slug>/', EventDetailView.as_view(), name='event-details-page'),
-    path('addParticipant/', ParticipantCreateView.as_view(), name='add-participant'),
+    path('addParticipant/<str:slug>/', ParticipantCreateView.as_view(), name='add-participant'),
 ]

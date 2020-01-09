@@ -6,7 +6,10 @@
       <hr>
       <p>{{ event.description|linebreaksbr }}</p>
       <hr>
-      <a href="{% url 'event-details-page' %}" title="Read More">Join Event</a>
+      <form method='post' action="{% url 'add-participant' event.slug%}">
+            {% csrf_token %}
+            <button>Join Event</button>
+      </form>
       <a href="{% url 'event-list-page' %}">Back to List</a>
 
 {% endblock %}

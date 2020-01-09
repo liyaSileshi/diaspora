@@ -21,7 +21,7 @@ class Event(models.Model):
                                    help_text="The date and time this page was created. Automatically generated when the model saves.")
     modified = models.DateTimeField(auto_now=True,
                                     help_text="The date and time this page was updated. Automatically generated when the model updates.")
-    # participants = models.ManyToManyField(User,blank=True,related_name='participant')
+    participants = models.ManyToManyField(User,blank=True,related_name='participant')
 
     def __str__(self):
         return self.name
@@ -40,7 +40,7 @@ class Event(models.Model):
         return super(Event, self).save(*args, **kwargs)
 
     
-class Participant(models.Model):
-    user = models.ManyToManyField(User,blank=True)
-    # It's suggested to use plural: users = ....
-    event = models.ForeignKey(Event,on_delete=models.CASCADE)
+# class Participant(models.Model):
+#     user = models.ManyToManyField(User,blank=True)
+#     # It's suggested to use plural: users = ....
+#     event = models.ForeignKey(Event,on_delete=models.CASCADE)
