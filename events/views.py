@@ -52,6 +52,7 @@ class EventCreateView(CreateView):
     
 class ParticipantCreateView(CreateView):
     model = Event
+    fields = ('participants',)
     # def get(self, request, *args, **kwargs):
     #     context = {'form': EventForm()}
     #     return render(request, 'events/new_event.html', context)
@@ -61,8 +62,8 @@ class ParticipantCreateView(CreateView):
     # then that view will be linked to a url and that url will be
     # linked to the join event button! 
     def post(self, request, slug, *args, **kwargs):
-        print('this works')
-        print(slug)
+        # print('this works')
+        # print(slug)
         # event = self.objects.get (id = instance.id)
         event = self.get_queryset().get(slug__iexact=slug)
         # participants = Participant(event = event)

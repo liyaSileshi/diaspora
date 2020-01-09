@@ -6,6 +6,7 @@
       <hr>
       <p>{{ event.description|linebreaksbr }}</p>
       <hr>
+      <p>{{ event.participants.all }}</p>
       <form method='post' action="{% url 'add-participant' event.slug%}">
             {% csrf_token %}
             <button>Join Event</button>
