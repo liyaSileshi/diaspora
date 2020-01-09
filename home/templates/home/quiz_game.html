@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/styles.css' %}">
+        <title> </title> 
+    </head>
+    
+    <body>
+        <div id='quiz' class='containerquiz'>
+            <!-- quiz questions -->
+        </div>
+
+        <!-- Scripts -->
+        <script>
+            const questions = [
+                {
+                    q: "What is Waldeinsamkeit?",
+                    a: [
+                        'The feeling of connectedness with nature.',
+                        'Kite flying in the sky',
+                        'Town of small population'
+                    ],
+                    correct: 0
+                },
+                {
+                    q: 'What is the capital city of Egypt?',
+                    a: [
+                        'Mombassa',
+                        'Cairo',
+                        'Addis Ababa'
+                    ],
+                    correct: 0
+                },
+                {
+                    q: 'Who was the first president of South Africa?',
+                    a: [
+                        'Nelson Mandela',
+                        'Robert Mugabe',
+                        'Donald Trump'
+                    ],
+                    correct: 0
+                }
+            ]
+
+            function init() {
+                const quizEl = document.getElementById('quiz')
+                let quizStr = ''
+        
+                questions.forEach( function(question, qIndex){
+                    let answerStr = ''
+                    const answerOrder = randomRange(question.a.length)
+                    question.a.forEach(function(answer, aIndex){
+                        answerStr += `
+                        <li style='order: ${answerOrder[aIndex]}'>
+                            <label>
+                                <input
+                                    type='radio'
+                                    name='question-${qIndex}'
+                                    data-correct = '${question.correct === aIndex}'
+                                >
+                                ${answer} 
+                            </label>
+                        </li>
+                        `
+                    })
+
+                    quizStr += `
+                    <form class='formQuiz'>
+                        <h1>${question.q}</h1>
+                        <div class='alert'> - </div>
+                        <ul style='display: flex; flex-direction: column;'>
+                            ${answerStr}
+                        </ul>
+                        <button type='submit'>Submit</button>
+                    </form>
+                    `
+                })
+                quizEl.innerHTML = quizStr
+                quizEl.addEventListener('submit',function(e){
+                    e.preventDefault()
+                    const alert = e.target.querySelector('div.alert')
+                    const selectedInput = e.target.querySelector('input[type=radio]:checked')
+                    if (selectedInput === null){
+                        alert.innerHTML = 'Please select an answer'
+                    }
+                    else if (selectedInput.dataset.correct === 'true'){
+                        alert.innerHTML = "That's correct!"
+                    } else {
+                        alert.innerHTML = 'Oops! try again!'
+                    }
+                })
+                
+            } //end init()
+
+            init()
+
+            function random(n){
+                const num = Math.random()* n
+                return Math.floor(num)
+            }
+
+            function randomRange(x) {
+                const arr = []
+                for (let i = 0; i < x; i += 1){
+                    arr.push(i)
+                }
+                const randomArr = []
+                while(arr.length > 0){
+                    const randomIndex = random(arr.length)
+                    const randomNumber = arr[randomIndex]
+                    randomArr.push(randomNumber)
+                    arr.splice(randomIndex, 1)
+                }
+                return randomArr
+
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    background-color: blue;
+    font-size: 16px;
+    font-family: Helvetica;
+    padding: 1em;
+    /* display: flex; */
+}
+
+li{
+    list-style: none;
+    margin-bottom: 1em;
+    font-weight: 350;
+    font-size: 1.25em;
+}
+
+ul{
+    padding: 0;
+    margin-bottom: 1em;
+ }
+
+.containerquiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size:1.5em;
+}
+
+.formQuiz{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    max-width: 20em;
+    border-bottom:0.5px solid black;
+}
+
+button{
+    background-color: #008CBA;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    margin-left: 16em;
+}
