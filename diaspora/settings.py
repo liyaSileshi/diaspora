@@ -25,7 +25,7 @@ SECRET_KEY = '3^t5it-n4s^zi2so__ges4s8=be0zc0srl5avr8yqklc(jcm5o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1', 'diaspora-lt.herokuapp.com']
 
 
 # Application definition
@@ -132,6 +132,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
      os.path.join(BASE_DIR, "static"),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Location 
 LOCATION_FIELD = {

@@ -52,7 +52,7 @@ button{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    border-bottom: solid black 1px;
+    /* border-bottom: solid black 1px; */
   }
   
   .features > ul > li:nth-child(2n){
