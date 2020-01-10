@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<section class='history'>
+<section class='features'>
     <ul>
       <li> 
         <div>
@@ -23,6 +23,7 @@
             {% if user.is_authenticated %}
                 <a href="{% url 'question-list-page' %}" class="btn btn-danger ml-2">Click to see questions and ask</a>
             {% endif %}
+          </div>
           <div>
             <img src="{% static 'home/images/questions.jpg' %}" alt='QnA' width='500' height=auto>
           </div>  
