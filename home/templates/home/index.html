@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block styles%}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/styles.css' %}">
+{% endblock %}
 {% block content %}
 <section class='features'>
     <ul>
@@ -36,7 +41,19 @@
             <div>
               <img src="{% static 'home/images/immigration.jpg' %}" alt='Links' width='500' height=auto>
             </div>  
-          </li>   
+        </li>   
+
+        <li> 
+            <div>
+              <h2>Quiz for citizenship questions</h2>
+              {% if user.is_authenticated %}
+                  <a href="{% url 'quiz' %}" class="btn btn-danger ml-2">Click to see quiz</a>
+              {% endif %}
+            </div>
+            <div>
+              <img src="{% static 'home/images/quiz.jpg' %}" alt='QnA' width='500' height=auto>
+            </div>  
+          </li>
       </ul>
   </section>
 {% endblock %}
