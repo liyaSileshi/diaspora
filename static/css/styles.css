@@ -68,8 +68,8 @@ body{
 } */
 .nav-div{
     height: 30em;
-    background-color: #FFF5D0;
-    
+    background-color: rgb(243, 201, 246);
+    /* #FFF5D0 */
 }
 
 .left-nav a{

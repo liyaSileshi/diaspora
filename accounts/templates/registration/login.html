@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
+{% block styles%}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/styles.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h3>Log In <small class="text-muted">to create your own wiki pages!</small></h3>
-    <hr>
+<div class='login-page'>
+    <h3 class='login-title'>Log In</h3>
     <div class="row">
         <div class="col">
             {% if form.errors %}
@@ -33,7 +38,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-8">
-                        <input type="submit" value="login" class="btn btn-success">
+                        <input type="submit" value="LOGIN" class="btn btn-success">
                         <input type="hidden" name="next" value="{{ next }}">
                         <a href="{% url 'password_reset' %}" class="btn btn-primary ml-2">Forgot Password</a>
                     </div>
@@ -42,4 +47,6 @@
             </form>
         </div>
     </div>
+</div>
+    
 {% endblock %}
