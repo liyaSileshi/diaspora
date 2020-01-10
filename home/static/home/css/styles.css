@@ -67,3 +67,14 @@ button{
   .features li h2 {
     margin: 0;
   }
+
+  .feat-titles{
+    font-size: 1.75em;
+  }
+
+  .feat-para{
+    color: grey;
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+  

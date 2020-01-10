@@ -9,7 +9,12 @@
     <ul>
       <li> 
         <div>
-          <h2>Join events happening around</h2>
+          <h2 class='feat-titles'>Join events happening around you</h2>
+          <p class='feat-para'>With the largest on-demand network in the industry,
+            you can explore your city, find its hidden hotspots,
+            and watch as we bring your new favorites right to your
+            door. Download the app for iOS or Android for free.</p>
+
             {% if user.is_authenticated %}
                 <div class="text-white">Hello, <strong>{{user.username}}</strong>!</div>
                 <a href="{% url 'event-list-page' %}" class="btn btn-danger ml-2">Click to see events or host one</a>
@@ -24,7 +29,11 @@
       </li>
       <li> 
           <div>
-            <h2>Ask any questions</h2>
+            <h2 class='feat-titles'>Ask any questions</h2>
+            <p class='feat-para'>With the largest on-demand network in the industry,
+                you can explore your city, find its hidden hotspots,
+                and watch as we bring your new favorites right to your
+                door. Download the app for iOS or Android for free.</p>
             {% if user.is_authenticated %}
                 <a href="{% url 'question-list-page' %}" class="btn btn-danger ml-2">Click to see questions and ask</a>
             {% endif %}
@@ -36,7 +45,11 @@
 
         <li> 
             <div>
-              <h2>Helpful immigration links</h2>
+              <h2 class='feat-titles'>Helpful immigration links</h2>
+              <p class='feat-para'>With the largest on-demand network in the industry,
+                you can explore your city, find its hidden hotspots,
+                and watch as we bring your new favorites right to your
+                door. Download the app for iOS or Android for free.</p>
             </div> 
             <div>
               <img src="{% static 'home/images/immigration.jpg' %}" alt='Links' width='500' height=auto>
@@ -45,7 +58,11 @@
 
         <li> 
             <div>
-              <h2>Quiz for citizenship questions</h2>
+              <h2 class='feat-titles'>Quiz for citizenship questions</h2>
+              <p class='feat-para'>With the largest on-demand network in the industry,
+                you can explore your city, find its hidden hotspots,
+                and watch as we bring your new favorites right to your
+                door. Download the app for iOS or Android for free.</p>
               {% if user.is_authenticated %}
                   <a href="{% url 'quiz' %}" class="btn btn-danger ml-2">Click to see quiz</a>
               {% endif %}

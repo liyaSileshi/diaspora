@@ -15,6 +15,48 @@ body{
 .authentication{
     margin-left: 60em;
 }
+
+.login{
+    border-style: solid;
+    color: rgb(68, 64, 64);
+    border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.logout{
+    border-style: solid;
+    color: rgb(68, 64, 64);
+    border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.signup{
+    border-style: solid;
+    color: white;
+    background-color: rgb(68, 64, 64);
+    border-color: rgb(68, 64, 64);
+    border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.home{
+    color: rgb(68, 64, 64);
+    font-size: 1.25em;
+}
+
+.about{
+    color: rgb(68, 64, 64);
+    font-size: 1.25em;
+}
 /* .right-nav{
     display: flex;
     justify-content: flex-end;
