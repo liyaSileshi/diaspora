@@ -52,3 +52,55 @@ nav a{
     color: white;
     border-radius: 1em;
 }
+
+.EventForm{
+    border: solid 1px;
+    padding: 1em;
+    margin-left: 30em;
+    margin-right: 30em;
+    margin-bottom: 10em;
+    background-color: rgb(243, 201, 246);
+}
+
+.create-event{
+    margin-left: 20em;
+    margin-top: 5em;
+}
+
+.last-updated{
+    color: grey;
+}
+
+.event-description{
+    color: rgb(90, 88, 88);
+    font-size: 1.5em;
+}
+
+.join-button{
+    padding: 1em;
+    border: 1px solid;
+    margin-left: 4em;
+    background-color: purple;
+    color: white;
+    margin-top: 6em;
+}
+
+.who-going{
+    font-size: 2em;
+}
+
+.event-detail{
+    margin-left: 6em;
+    margin-bottom: 15em;
+}
+
+.back{
+    /* margin-top: 3em; */
+    text-decoration: none;
+    border: solid;
+    margin: 10em;
+}
+
+.event-name{
+    font-size: 2em;
+}

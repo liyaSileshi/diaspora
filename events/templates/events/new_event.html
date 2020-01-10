@@ -2,12 +2,19 @@
 {% block head%}
     {{form.media}}
 {% endblock %}
+
+{% block styles%}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/styles.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h2>New Event Page</h2>
+    <h1 class='create-event'>Create Public Event</h1>
     <form method="POST" class="EventForm">{% csrf_token %}
         <div class = 'form-page'>
             {{form.as_p}}
         </div>
         <button type="submit" class="btn btn-success ml-4">Save</button>
     </form>
+    <a href="{% url 'event-list-page' %}" title="event-create" class='link-create-event'> Back to list of events</a>
 {% endblock %}
