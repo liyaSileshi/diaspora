@@ -1,15 +1,20 @@
 {% extends "base.html" %}
+
+{% block styles%}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/styles.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1> Events </h1>
-<a href="{% url 'create-event-page' %}" title="event-create">Create an event</a>
+<h1 class='event-header'> Events near you</h1>
+<a href="{% url 'create-event-page' %}" title="event-create" class='link-create-event'> + Create an event</a>
   {% if events %}
     {% for event in events %}
     <div class='event-card'>
-      <h1>{{event.name}}</h1>
-      <h2>{{event.street_address}}</h2>
-      <h3>{{event.city}}</h3>
+      <h1>Event name: {{event.name}}</h1>
+      <h2>Address: {{event.street_address}}</h2>
+      <h3>City: {{event.city}}</h3>
       <a href="{% url 'event-details-page' event.slug %}" title="Read More">Read More</a>
-      
     </div>
     {% endfor %}
   {% else %}

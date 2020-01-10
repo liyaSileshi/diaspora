@@ -14,7 +14,7 @@ nav{
 
 .nav-div{
     height: 20em;
-    background-color: #FFF5D0;
+    /* background-color: #FFF5D0; */
 }
 
 nav a{
@@ -23,11 +23,32 @@ nav a{
 }
 
 .event-card{
-    border: solid;
+    /* border: solid; */
     margin-top: 2em;
+    border: solid 1px;
+    /* width: fit-content; */
+    width: 35em;
+    margin-left: 37em;
+    padding-left: 3em;
+    margin-bottom: 4em;
 }
 
 .main-header{
     font-size: 3em;
     padding-left: 14em;
+}
+
+.event-header{
+    font-size: 5em;
+    padding-left: 35%;
+}
+
+.link-create-event{
+    text-decoration: none;
+    padding: 0.75em;
+    border: 1px solid;
+    margin-left: 75%;
+    background-color: purple;
+    color: white;
+    border-radius: 1em;
 }
