@@ -83,3 +83,7 @@ button{
       height: 500px;
       color: white;
   }
+
+  img{
+    border-radius: 9em;
+  }
