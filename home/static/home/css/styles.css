@@ -78,3 +78,8 @@ button{
     line-height: 2em;
   }
   
+  footer{
+      background-color: rgb(15, 15, 15);
+      height: 500px;
+      color: white;
+  }
