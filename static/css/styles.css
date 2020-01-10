@@ -5,22 +5,36 @@ body{
     margin: 0;
 }
 
-nav{
+.left-nav{
     display: flex;
     justify-content: flex-start;
     padding-bottom: 0.75em;
-    padding-top: 0.75em;
+    padding-top: 1.25em;
 }
 
+.authentication{
+    margin-left: 60em;
+}
+/* .right-nav{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
+} */
 .nav-div{
-    height: 20em;
+    height: 30em;
     background-color: #FFF5D0;
 }
 
-nav a{
+.left-nav a{
     margin-right: 1em;
     text-decoration: none;
 }
+
+/* .right-nav a{
+    margin-right: 1em;
+    text-decoration: none;
+} */
 
 .event-card{
     border: solid;
@@ -30,5 +44,6 @@ nav a{
 .main-header{
     font-size: 3em;
     padding-left: 14em;
+    padding-top: 3em;
 }
 
