@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-{% block head%}
-    {{form.media}}
-{% endblock %}
+
 
 {% block styles%}
     {% load static %}
@@ -9,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class='create-event'>Create Public Event</h1>
-    <form method="POST" class="EventForm">{% csrf_token %}
+    <h1 class='create-event'>Write your questions here</h1>
+    <form method="POST" class="QuestionForm">{% csrf_token %}
         <div class = 'form-page'>
             {{form.as_p}}
             <!-- <p>
@@ -22,5 +20,3 @@
     </form>
     <a href="{% url 'event-list-page' %}" title="event-create" class='link-create-event'> Back to list of events</a>
 {% endblock %}
-
-

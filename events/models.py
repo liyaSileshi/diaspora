@@ -5,12 +5,12 @@ from django.urls import reverse
 from django.utils.text import slugify
 from django.utils import timezone
 from django.contrib.auth.models import User
- 
+
 class Event(models.Model):
     name = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.PROTECT,
                                help_text="The user that posted this event.", default=1, related_name='author')
-    date_time = models.DateTimeField('event date time')
+    date_time = models.DateTimeField('event date time', null=True)
     street_address = models.CharField(max_length=255, default='address 1')
     city = models.CharField(max_length=255, default='city name')
     location = PlainLocationField(based_fields=['address','city'], zoom=7, default='location')

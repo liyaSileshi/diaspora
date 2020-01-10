@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h1> Questions </h1>
-
+<a href="{% url 'create-question-page' %}" title="question-create" class='link-create-event'> + Ask you question here</a>
   {% if questions %}
     {% for question in questions %}
     <div class='event-card'>
