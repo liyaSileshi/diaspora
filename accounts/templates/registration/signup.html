@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
+{% block styles%}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/styles.css' %}">
+{% endblock %}
+
 {% block content %}
-  <h3>Sign Up <small class="text-muted">to create your own wiki pages!</small></h3>
-  <hr>
+<div class='signup-page'>
+  <h3 class='signup-title'>Sign Up</h3>
       <div class="row">
         <div class="col">
           <form method="post" class="mx-auto">
@@ -13,13 +18,15 @@
                 {% endfor %}
                 <div class="form-group row">
                     <div class="col-8">
-                      <label for="id_{{ field.name }}">{{ field.label|title }}:</label>
-                      <input class="form-control" type="{% if "password" in field.name %}password{% else %}text{% endif %}" name="{{ field.name }}" id="id_{{ field.name }}" required>
+                      <label for="id_{{ field.name }}">{{ field.label|title }}</label>
+                      <input class="form-control" type="{% if 'password' in field.name %}password{% else %}text{% endif %}" name="{{ field.name }}" id="id_{{ field.name }}" required>
                     </div>
                 </div>
             {% endfor %}
-            <button type="submit" class="btn btn-success">Sign up</button>
+            <button type="submit" class="signup-button">Sign up</button>
           </form>
         </div>
       </div>
+</div>
+  
 {% endblock %}

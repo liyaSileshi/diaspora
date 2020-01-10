@@ -7,11 +7,37 @@
     background-color: rgb(243, 201, 246);
     margin-top: 3em;
     border-radius: 2em;
+    margin-bottom: 15em;
+}
+
+.signup-page{
+    margin-left: 40%;
+    border: solid 1px;
+    width: fit-content;
+    padding: 4em;
+    border-color: rgb(243, 201, 246);
+    background-color: rgb(243, 201, 246);
+    margin-top: 3em;
+    border-radius: 2em;
+    margin-bottom: 15em;
+}
+
+.signup-button{
+    padding: 1em;
+    margin-left: 40%;
+    margin-top: 1em;
+    border-radius: 1em;
+    font-size: 1em;
 }
 
 .login-title{
     font-size: 1.75em;
     padding-left: 2.5em;
+}
+
+.signup-title{
+    font-size: 1.75em;
+    padding-left: 4em;
 }
 
 .col-8{
@@ -31,4 +57,3 @@ input{
     border: none;
     padding-right: 3em;
 }
-
