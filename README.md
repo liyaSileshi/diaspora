@@ -11,9 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Django 
-django-location-field : https://github.com/caioariede/django-location-field
-python
+- Django 
+- django-location-field : https://github.com/caioariede/django-location-field
+- python
 
 
 
